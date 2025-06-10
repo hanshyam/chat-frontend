@@ -3,7 +3,7 @@ import { createContext, useEffect, useState } from "react";
 import toast from 'react-hot-toast';
 import { io } from 'socket.io-client';
 
-const backendUrl = "http://localhost:5000";
+const backendUrl = "https://chat-backend-htz0.onrender.com";
 
 // Set default base URL for axios
 axios.defaults.baseURL = `${backendUrl}/api`;
