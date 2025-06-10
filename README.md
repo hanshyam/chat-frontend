@@ -56,4 +56,67 @@ chat-app/
 │   └── vite.config.js              # Vite configuration
 
 
+⚛️ Frontend (React + Vite) Installation
+Step 1: Navigate to the client directory
+bash
+Copy
+Edit
+cd client
+Step 2: Install all dependencies
+bash
+Copy
+Edit
+npm install
+This installs the following packages:
+
+React & React DOM – Core React libraries
+
+React Router DOM – For page routing (v7)
+
+Axios – HTTP requests to the backend
+
+Socket.IO Client – Real-time WebSocket connection
+
+Tailwind CSS & @tailwindcss/vite – Utility-first CSS framework
+
+React Hot Toast – Toast notifications for success/error messages
+
+Step 3: Tailwind CSS Setup
+Ensure your tailwind.config.js looks like this:
+
+js
+Copy
+Edit
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+In your src/index.css, import Tailwind’s directives:
+
+css
+Copy
+Edit
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+Step 4: Start the development server
+bash
+Copy
+Edit
+npm run dev
+This will start your frontend at:
+
+arduino
+Copy
+Edit
+http://localhost:5173
+Make sure your backend (server) is running on the port expected by your frontend (usually http://localhost:5000 or specified in .env).
+
 
